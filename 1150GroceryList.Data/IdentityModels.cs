@@ -50,6 +50,7 @@ namespace _1150GroceryList.Data
         public DbSet<Recipe> Recipes { get; set; }
         public DbSet<Ingredient> Ingredients { get; set; }
         public DbSet<IngredientList> IngredientLists { get; set; }
+        public DbSet<Meal> Meals { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder
