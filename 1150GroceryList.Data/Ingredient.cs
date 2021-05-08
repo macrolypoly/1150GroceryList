@@ -13,9 +13,7 @@ namespace _1150GroceryList.Data
         public int Id { get; set; }
         public string Name { get; set; }
 
-        
-
-
+      
         public bool IsOrganic { get; set; }
         public virtual ICollection<IngredientList> IngredientsList { get; set; }
         public Guid OwnerId { get; set; }
