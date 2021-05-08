@@ -8,5 +8,8 @@ namespace _1150GroceryList.Data
 {
    public class IngredientList
     {
+
+        public List<Ingredient> ListOfIngredients { get; set; }
+
     }
 }
