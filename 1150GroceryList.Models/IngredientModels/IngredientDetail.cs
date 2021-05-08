@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace _1150GroceryList.Models.IngredientModels
 {
-    class IngredientDelete
+    public class IngredientDetail
     {
-        public string Description { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
     }
 }

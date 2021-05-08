@@ -69,11 +69,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IngredientService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\1150GroceryList.Data\1150GroceryList.Data.csproj">
+      <Project>{46a14580-69d2-4b99-a2ff-c19bf940fd1c}</Project>
+      <Name>1150GroceryList.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\1150GroceryList.Models\1150GroceryList.Models.csproj">
+      <Project>{cd88ed67-d54c-40eb-890a-9e469bd17a65}</Project>
+      <Name>1150GroceryList.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
