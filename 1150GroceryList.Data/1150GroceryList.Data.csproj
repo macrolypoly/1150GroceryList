@@ -91,12 +91,22 @@
     <Compile Include="Ingredient.cs" />
     <Compile Include="IngredientList.cs" />
     <Compile Include="Meal.cs" />
+    <Compile Include="Migrations\202105081617023_d.cs" />
+    <Compile Include="Migrations\202105081617023_d.designer.cs">
+      <DependentUpon>202105081617023_d.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Recipe.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202105081617023_d.resx">
+      <DependentUpon>202105081617023_d.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
