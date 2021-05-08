@@ -17,6 +17,7 @@ namespace _1150GroceryList.Services
                 var entity = new Ingredient();
                 entity.Id = model.IngredientId;
                 entity.Name = model.Name;
+                entity.IsOrganic = model.IsOrganic;
 
                 ctx.Ingredients.Add(entity);
                 return ctx.SaveChanges() == 1;
@@ -31,7 +32,8 @@ namespace _1150GroceryList.Services
                     .Select(p => new IngredientListItem()
                     {
                         IngredientId = p.Id,
-                        Name = p.Name
+                        Name = p.Name,
+                        IsOrganic = p.IsOrganic
                     });
                 return query.ToArray();
             }
@@ -45,6 +47,7 @@ namespace _1150GroceryList.Services
                     .Single(e => e.Id == model.Id);
                 entity.Id = model.Id;
                 entity.Name = model.Name;
+                entity.IsOrganic = model.IsOrganic;
 
                 return ctx.SaveChanges() == 1;
             }
