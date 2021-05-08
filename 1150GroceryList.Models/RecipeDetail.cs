@@ -8,15 +8,12 @@ using System.Threading.Tasks;
 
 namespace _1150GroceryList.Models
 {
-    public class RecipeCreate
+    public class RecipeDetail
     {
-        [Required]
         public string Name { get; set; }
-        [Required]
         public string RecipeDescription { get; set; }
-        [Display(Name = "Date Created")]
-        public DateTimeOffset CreatedUtc { get; set; }
-        [Required]
         public IngredientList IngredientList { get; set; }
+        [Display(Name = "Created")]
+        public DateTimeOffset CreatedUtc { get; set; }
     }
 }
