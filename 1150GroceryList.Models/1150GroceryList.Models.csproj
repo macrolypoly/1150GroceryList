@@ -69,6 +69,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IngredientListModel\IngredientListCreate.cs" />
     <Compile Include="IngredientModels\IngredientCreate.cs" />
     <Compile Include="IngredientModels\IngredientDetail.cs" />
     <Compile Include="IngredientModels\IngredientEdit.cs" />
