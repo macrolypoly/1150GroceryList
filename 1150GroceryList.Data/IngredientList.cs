@@ -10,13 +10,7 @@ namespace _1150GroceryList.Data
 {
    public class IngredientList
     {
-        [Key]
-        public int IngredientListID { get; set; }
-        [ForeignKey("Recipe")]
-        public int RecipeId { get; set; }
-        public virtual Recipe Recipe { get; set; }
-        public List<Ingredient> ListOfIngredients { get; set; }
-
+       
 
     }
 }
