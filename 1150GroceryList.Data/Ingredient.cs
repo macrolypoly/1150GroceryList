@@ -12,5 +12,13 @@ namespace _1150GroceryList.Data
         [Key]
         public int Id { get; set; }
         public string Name { get; set; }
+        public bool IsOrganic { get; set; }
+        public virtual ICollection<IngredientList> IngredientsList { get; set; }
+        public Guid OwnerId { get; set; }
+        public Ingredient()
+        {
+            IngredientsList = new HashSet<IngredientList>();
+        }
     }
+}
 }

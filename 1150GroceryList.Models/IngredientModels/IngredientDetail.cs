@@ -10,5 +10,7 @@ namespace _1150GroceryList.Models.IngredientModels
     {
         public int Id { get; set; }
         public string Name { get; set; }
+
+        public bool IsOrganic { get; set; }
     }
 }
