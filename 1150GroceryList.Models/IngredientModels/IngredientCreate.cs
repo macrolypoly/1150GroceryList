@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _1150GroceryList.Data
+namespace _1150GroceryList.Models.IngredientModels
 {
-    public class Ingredient
+    class IngredientCreate
     {
-        public int Id { get; set; }
+        public int IngredientId { get; set; }
         public string Name { get; set; }
     }
 }
