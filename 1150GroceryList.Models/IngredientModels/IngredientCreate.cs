@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _1150GroceryList.Data
+namespace _1150GroceryList.Models.IngredientModels
 {
-    public class Meal
+    public class IngredientCreate
     {
-        public int MealId { get; set; }
+        public int IngredientId { get; set; }
         public string Name { get; set; }
-        public List<Recipe> Meals { get; set; }
+
+        public bool IsOrganic { get; set; }
     }
 }

@@ -69,6 +69,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IngredientListModel\IngredientDataListItem.cs" />
+    <Compile Include="IngredientListModel\IngredientListCreate.cs" />
+    <Compile Include="IngredientListModel\IngredientListDetail.cs" />
+    <Compile Include="IngredientListModel\IngredientListEdit.cs" />
+    <Compile Include="IngredientModels\IngredientCreate.cs" />
+    <Compile Include="IngredientModels\IngredientDetail.cs" />
+    <Compile Include="IngredientModels\IngredientEdit.cs" />
+    <Compile Include="IngredientModels\IngredientListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecipeCreate.cs" />
     <Compile Include="RecipeDetail.cs" />
@@ -80,7 +88,9 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\1150GroceryList.Data\1150GroceryList.Data.csproj">
-      <Project>{46a14580-69d2-4b99-a2ff-c19bf940fd1c}</Project>
+
+      <Project>{46A14580-69D2-4B99-A2FF-C19BF940FD1C}</Project>
+
       <Name>1150GroceryList.Data</Name>
     </ProjectReference>
   </ItemGroup>
