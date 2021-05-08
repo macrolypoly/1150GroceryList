@@ -36,6 +36,19 @@ namespace _1150GroceryList.Services
                 return query.ToArray();
             }
         }
+        public bool UpdateIngredient(IngredientEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx
+                    .Ingredients
+                    .Single(e => e.Id == model.Id);
+                entity.Id = model.Id;
+                entity.Name = model.Name;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
         public bool DeleteIngredient(int id)
         {
             using (var ctx = new ApplicationDbContext())
