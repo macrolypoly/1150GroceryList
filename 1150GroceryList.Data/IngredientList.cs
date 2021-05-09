@@ -9,8 +9,6 @@ namespace _1150GroceryList.Data
 {
     public class IngredientList
     {
-
-
         [Key]
         public int Id { get; set; }
 
