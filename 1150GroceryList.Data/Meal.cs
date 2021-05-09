@@ -14,10 +14,13 @@ namespace _1150GroceryList.Data
         public int MealId { get; set; }
         [Required]
         public string MealName { get; set; }
+        public Guid UserID { get; set; }
         [Required]
         public string MealDecription { get; set; }
         [Required]
-        public virtual ICollection<Recipe> RecipesList{ get; set; }
+        [ForeignKey("Recipe")]
+        public int RecipeID { get; set; }
+        public virtual Recipe Recipe{ get; set; }
         [Required]
         [ForeignKey("IngredientList")]
         public int IngredientListId { get; set; }
