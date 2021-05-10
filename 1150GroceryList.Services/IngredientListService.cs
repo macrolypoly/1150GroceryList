@@ -21,7 +21,9 @@ namespace _1150GroceryList.Services
         {
             var entity1 = new IngredientList()
             {
-                Name = model.Name
+                Name = model.Name,
+                
+                
             };
             using (var ctx = new ApplicationDbContext())
             {
@@ -34,7 +36,7 @@ namespace _1150GroceryList.Services
                         return false;
 
 
-                    entity1.ListofIngredient.Add(enti);
+                    entity1.Ingredients.Add(enti);
                 }
 
                 ctx.IngredientLists.Add(entity1);
@@ -53,7 +55,7 @@ namespace _1150GroceryList.Services
                                 {
                                     Id = i.Id,
                                     Name = i.Name,
-                                    IngredientListforitem = i.ListofIngredient.Select(e => new IngredientDataListItem()
+                                    IngredientListforitem = i.Ingredients.Select(e => new IngredientDataListItem()
                                     {
                                         Id = e.Id,
                                         Name = e.Name
@@ -65,35 +67,39 @@ namespace _1150GroceryList.Services
             }
 
         }
-        //public IngredientListDetail GetIngredientlistforRecipe(int id)
-        //{
-        //    using (var ctx = new ApplicationDbContext())
-        //    {
-        //        var entity = ctx
-        //                        .IngredientLists
-        //                        .Single(c => c.Id == id);
+        public IngredientListDetail Getingredientlistforrecipe(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx
+                                .IngredientLists
+                                .SingleOrDefault(c => c.Id == id);
 
 
 
+                var ingredient = new IngredientListDetail()   //using an explicit cast
+                {
+                    IngredientListId = entity.Id,
+                    Name = entity.Name,
+                    Ingredients = (List<Ingredient>)entity.Ingredients.Select(i => new IngredientListItem()
+                    {
+                        Name = i.Name,
+                        IsOrganic = i.IsOrganic
 
-        //        return new IngredientListDetail()
-        //        {
-        //            IngredientListId = entity.Id,
-        //            IngredientList = entity.ListofIngredient.Select(e => new IngredientDataListItem()
-        //            {
-        //                Id = e.Id,
-        //                Name = e.Name
-        //            }).ToArray();
-
-        //        }
-
-        //    }   
-
-        //}   
-
-
-                                
-           
+                    })
+                };
+                return ingredient;
                 
+
+            }
+
+        }
+
     }
+
+
+
+
+
 }
+
