@@ -10,7 +10,7 @@ namespace _1150GroceryList.Models.IngredientListModel
     public class IngredientListDetail
     {
         public int IngredientListId { get; set; }
-        public List<Ingredient> IngredientList { get; set; }
+        public List<Ingredient> Ingredients { get; set; }
         public string Name { get; set; }
     }
 }

@@ -12,12 +12,12 @@ namespace _1150GroceryList.Data
         [Key]
         public int Id { get; set; }
 
-        public string Name { get; set; }
-        public virtual ICollection<Ingredient> ListofIngredient { get; set; }
+        public string Name { get; set; } //ingredientsformeal a
+        public virtual ICollection<Ingredient> Ingredients { get; set; } = new List<Ingredient>();
 
         public IngredientList()
         {
-            ListofIngredient = new HashSet<Ingredient>();
+            Ingredients = new HashSet<Ingredient>();
 
         }
     }
