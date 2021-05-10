@@ -26,10 +26,16 @@ namespace _1150GroceryList.Controllers
             var sservice = ing.CreateIngredientList(model);
             return Ok("ingredeint");
         }
-        public IHttpActionResult GetAllIngredientList()
+        public IHttpActionResult GetAllIngredientList()//
         {
             var ing = CreateIngredientListServices();
             var sservice = ing.GetAllIngredientList();
+            return Ok(sservice);
+        }
+        public IHttpActionResult GetshoppingList(int id)
+        {
+            var ing = CreateIngredientListServices();
+            var sservice = ing.Getingredientlistforrecipe(id);
             return Ok(sservice);
         }
     }
